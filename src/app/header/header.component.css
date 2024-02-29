@@ -1,0 +1,9 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .right-icons {
+    display: flex;
+    align-items: center;
+  }
