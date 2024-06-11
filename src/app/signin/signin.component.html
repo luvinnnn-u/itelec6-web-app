@@ -1,0 +1,28 @@
+
+<div class="centered-content">
+  <div class = "signup-logo">
+    <img src = "assets/tiktok.jpg" alt="Logo">
+    <br><br>
+    <p class="logo-text">Post short videos for fun!!</p> 
+  </div>
+  <div class="card">
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+      </div>
+      <br>
+      <button type="submit">Sign In</button>
+      <!-- In your signin.component.html -->
+<div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+    </form>
+    <div class="signup-link">
+      Don't have an account? <button type="button" (click)="navigateToSignup()">Sign Up</button>
+      <!-- <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>-->
+    </div> 
+  </div>
+</div>

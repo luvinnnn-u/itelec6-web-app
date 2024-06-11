@@ -1,24 +1,36 @@
-<!-- <p>
-    <mat-toolbar color="accent">
 
-        <span>My App </span>
-    </mat-toolbar>
-</p> -->
 
- 
-<!-- app.component.html -->
-<mat-toolbar color="accent" class="toolbar">
-    <span>My App</span>
+  <!-- <mat-toolbar color="accent" class="toolbar">
+    <span>Tiktok ni Meanne</span>
+    <span class="example-spacer"></span> -->
+
+      <!-- Create post button -->
+      <!-- <button routerLink="/create-post">Create Post</button> -->
+
+      <!-- Add the Sign Out button here -->
+      <!-- <button mat-icon-button class="example-icon" aria-label="Sign Out" (click)="showConfirmDialog()">
+        <mat-icon>exit_to_app</mat-icon>
+      </button> -->
+      <!-- <br> -->
+  <!-- </mat-toolbar>
+   -->
+
+   <mat-toolbar color="accent" class="toolbar">
+    <span>Tiktok ni Meanne</span>
     <span class="example-spacer"></span>
+  
+
     <div class="right-icons">
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-      </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
+    <!-- Create post button -->
+    <button mat-raised-button color="primary" class="create-post-btn" routerLink="/create-post">
+      Create Post
+    </button>
+  
+    <!-- Right icons container -->
+   
+      <!-- Sign Out button -->
+      <button mat-icon-button class="sign-out-btn" aria-label="Sign Out" (click)="showConfirmDialog()">
+        <mat-icon>exit_to_app</mat-icon>
       </button>
     </div>
   </mat-toolbar>

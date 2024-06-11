@@ -10,3 +10,6 @@ button{
 mat-card{
     margin: auto;
 }
+.file-input button {
+    margin-top: 10px; /* Adjust as needed */
+   }

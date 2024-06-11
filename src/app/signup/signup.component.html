@@ -1,0 +1,67 @@
+<!-- <div class="signup-container">
+  <div class="signup-logo">
+    <img src="assets/tiktok.jpg" alt="Logo">
+    <br><br>
+    <p class="logo-text">Post short videos for fun!!</p> 
+  </div>
+
+  <div class="signup-form">
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="username">Username:</label> 
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required>
+      </div>
+      <br>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" [(ngModel)]="user.confirmPassword" name="confirmPassword" required>
+      </div>
+      <br>
+      <button type="submit" style="color: white;">Sign Up</button>
+    </form>
+  </div>
+</div> -->
+
+<div class="signup-container">
+  <div class="signup-logo">
+    <img src="assets/tiktok.jpg" alt="Logo">
+    <br><br>
+    <p class="logo-text">Post short videos for fun!!</p> 
+  </div>
+
+  <div class="signup-form">
+    <form (submit)="onSubmit()">
+      <div>
+        <label for="username">Username:</label> 
+        <input type="text" id="username" [(ngModel)]="user.username" name="username" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="user.email" name="email" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="user.password" name="password" required (input)="checkPasswordsMatch()">
+      </div>
+      <br>
+      <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" [(ngModel)]="user.confirmPassword" name="confirmPassword" required (input)="checkPasswordsMatch()">
+      </div>
+      <br>
+      <button type="submit" style="color: white;">Sign Up</button>
+      <div *ngIf="passwordsDoNotMatch" class="error-message">Passwords do not match.</div>
+      <div *ngIf="passwordInvalid" class="error-message">{{ errorMessage }}</div>
+      <div *ngIf="errorMessage && !passwordInvalid && !passwordsDoNotMatch" class="error-message">{{ errorMessage }}</div>
+    </form>
+  </div>
+</div>
+

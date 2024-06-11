@@ -1,4 +1,4 @@
-
+<app-header></app-header>
 <mat-card>
   <form (submit)="onAddPost(postForm)" #postForm="ngForm">
     <mat-form-field>
@@ -19,7 +19,32 @@
               #content="ngModel"></textarea>
         <mat-error *ngIf="content.invalid"></mat-error>
     </mat-form-field>
+<!--image
+<mat-form-field>
+  <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;">
+  <button mat-button (click)="fileInput.click()">
+    <mat-icon>cloud_upload</mat-icon>
+    Upload Image
+  </button>
+</mat-form-field>
+<div class="file-input">
+  <input type="file" #fileInput (change)="onFileChange($event)" style="display: none;">
+  <button mat-button (click)="fileInput.click()">
+     <mat-icon>cloud_upload</mat-icon>
+     Upload Image
+  </button>
+ </div>-->
+ <!--imahe
+ <mat-form-field>
+  <input matInput type="text" name="imageUrl" ngModel required #imageUrl="ngModel"/>
+ </mat-form-field>-->
+ <mat-form-field>
+  <!--<input matInput type="text" name="imageUrl" ngModel required [value]="post.imageUrl" #imageUrl="ngModel"/>-->
+  <input matInput type="text" name="imageUrl" ngModel required [(ngModel)]="imageUrl"/>
+  
+</mat-form-field>
 
+ 
     <button mat-raised-button color="primary" type="submit">SAVE</button>
   
   

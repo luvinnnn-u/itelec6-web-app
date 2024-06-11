@@ -1,0 +1,53 @@
+    
+  .signup-container {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between the logo and the form */
+    align-items: center; /* Aligns items vertically in the center */
+    height: 100vh; /* Makes the container take the full viewport height */
+  }
+  
+  .signup-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-text {
+    text-align: center;
+    font-size: 20px;
+  }
+  
+  .signup-form {
+    width: 500px; /* Adjust the width as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Optional: Adds a subtle shadow around the form */
+    border-radius: 10px;
+  }
+  
+  .signup-form input {
+    width: 100%; /* Makes the input fields take the full width of the form */
+    padding: 10px; /* Adds padding inside the input fields for better spacing */
+    margin-bottom: 20px; /* Adds space below each input field */
+    border-radius: 10px; /* Adds a border radius to the input fields */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+  
+  .signup-form input[type="password"] {
+    margin-bottom: 0; /* Removes the bottom margin for the last input field if needed */
+  }
+
+  .signup-form button {
+    width: 100%; /* Makes the button take the full width of the form */
+    padding: 10px; /* Matches the padding of the input fields */
+    margin-bottom: 20px; /* Adds space below the button, similar to the input fields */
+    border-radius: 10px; /* Matches the border radius of the input fields */
+    background-color: rgb(0, 0, 0); /* Sets the background color to yellow */
+    color: black; /* Sets the text color to black for contrast */
+    border: none; /* Removes the default button border */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    box-sizing: border-box; /* Ensures padding is included in the width calculation */
+  }
+  
+  
+ 

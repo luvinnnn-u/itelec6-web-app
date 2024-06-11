@@ -1,5 +1,19 @@
+// import { Component } from '@angular/core';
+// import {Post} from './post.model';
+
+// @Component({
+//   selector: 'app-root',
+//   templateUrl: './app.component.html',
+//   styleUrls: ['./app.component.css']
+// })
+// export class AppComponent {
+//   title = 'meanstack_proj';
+// }
+
+
+// app.component.ts
 import { Component } from '@angular/core';
-import {Post} from './post.model';
+import { AuthService } from './auth.service'; // Import AuthService
 
 @Component({
   selector: 'app-root',
@@ -7,11 +21,5 @@ import {Post} from './post.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'meanstack_proj';
-
- // storedPosts: Post[] = [];
-
- //   onPostAdded(post: Post){
-   //   this.storedPosts.push(post);
-   // }
+  constructor(public authService: AuthService) {} // Inject AuthService
 }

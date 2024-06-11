@@ -1,4 +1,4 @@
-.toolbar {
+/* .toolbar {
     display: flex;
     justify-content: space-between;
   }
@@ -6,4 +6,45 @@
   .right-icons {
     display: flex;
     align-items: center;
+  }
+
+  .toolbar {
+    background-color: black; 
+    color: white; 
+  }
+  
+  .toolbar.mat-icon {
+    color: white; 
+  } */
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black; 
+    color: white; 
+  }
+  
+  .right-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+  }
+  
+  .create-post-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px; 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .create-post-btn:hover {
+    background-color: red; 
+  }
+  
+  .toolbar.mat-icon {
+    color: inherit;
   }
